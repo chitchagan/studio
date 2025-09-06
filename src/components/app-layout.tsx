@@ -14,6 +14,7 @@ import { UserNav } from '@/components/user-nav';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Separator } from './ui/separator';
+import { RefundPolicy } from './refund-policy';
 
 function getTitleFromPathname(pathname: string): string {
   if (pathname === '/') return 'Dashboard';
@@ -58,10 +59,15 @@ export function AppLayout({ children }: { children: ReactNode }) {
           <MainNav />
         </SidebarContent>
       </Sidebar>
-      <div className="md:border-l">
+      <div className="md:border-l flex flex-col min-h-screen">
         <SidebarInset>
+          <div className="flex flex-col flex-1">
             <Header />
-            <main className="p-4 sm:p-6 lg:p-8">{children}</main>
+            <main className="flex-1 p-4 sm:p-6 lg:p-8">{children}</main>
+            <footer className="mt-auto p-4 text-center text-sm">
+              <RefundPolicy />
+            </footer>
+          </div>
         </SidebarInset>
       </div>
     </SidebarProvider>
