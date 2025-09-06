@@ -48,13 +48,32 @@ By Day 28, participants will:
     title: 'Agentic AI Practitioner Course',
     company: 'Generative AI Training Company',
     location: '',
-    description: `The Agentic AI Practitioner Course focuses on building autonomous AI agents that can reason, plan, and execute tasks. This advanced course is for experienced developers and AI engineers who want to build sophisticated AI systems.
-Key Learning Objectives:
-- Learn about agent architectures like ReAct and Tree of Thoughts.
-- Implement multi-agent systems for complex problem-solving.
-- Integrate tools and external APIs with your agents.
-- Develop strategies for testing and evaluating AI agents.
-Required Skills: Advanced Python, Experience with LLMs, API Development.`,
+    description: `Week 1 – Foundations of Agentic AI
+Focus: Understanding what Agentic AI is and why it matters.
+Day 1–2: Concepts – difference between normal AI (single-task) vs. agentic AI (goal → plan → act). Components: LLM “brain,” memory, tools, environment.
+Day 3–4: Why corporates need it – HR, IT, Finance, Marketing use cases; overview of tools like ChatGPT Agentic Mode, Make.com, n8n, Bolt.new, Cursor, and Replit.
+Day 5 (Mini-Project): Build a simple FAQ Agent answering policy queries from a PDF.
+Week 2 – Prompting & Tool Use
+Focus: Making agents reliable and useful.
+Day 6–9: Prompt engineering (system/role prompts, constraints), multi-step reasoning, tool/API use (workflows with Slack/Email), and memory with vector stores (FAISS, Pinecone free tier).
+Day 10 (Mini-Project): Daily News Briefing Agent – pulls RSS feeds, summarizes, and sends updates via Slack/email.
+Week 3 – Multi-Agent Workflows & Automation
+Focus: Agents collaborating and automating corporate tasks.
+Day 11–14: Multi-agent systems (researcher + writer roles), business roles (planner, executor, critic), orchestration tools (LangGraph, CrewAI), and guardrails (compliance, prompt injection).
+Day 15 (Mini-Project): Research Analyst + Writer Agent – one gathers industry insights, another drafts an executive summary.
+Week 4 – Advanced Applications
+Focus: Developer and workflow agents.
+Day 16–19: Automations with n8n/Make.com, developer agents (Replit, Cursor), AI app builders (Bolt.new), and evaluation metrics (time, cost saved).
+Day 20 (Mini-Project): Sales Assistant Agent – webform → proposal generation → automated email.
+Week 5 – Industry Use Cases
+Focus: Mapping agents to real functions.
+Day 21–24: HR (resume screener, interview assistant), Finance (report generator), IT Ops (ticket triaging), Marketing (campaign generator, competitor analysis).
+Day 25 (Mini-Project): Department-Specific Agent – team chooses a domain and builds one automation (e.g., HR candidate tracker).
+Week 6 – Capstone & Future Readiness
+Focus: Real-world application and forward-looking insights.
+Day 26–27: Designing end-to-end solutions; trends like agent marketplaces and self-healing agents.
+Day 28–29: Capstone project kickoff and build – teams define a corporate problem and prototype a solution.
+Day 30: Final showcase, feedback, and roadmap for safe adoption.`,
     salary: '25,000 INR',
     type: 'Live Interactive Training',
     postedDate: '2024-07-19',
