@@ -15,6 +15,7 @@ import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Separator } from './ui/separator';
 import { RefundPolicy } from './refund-policy';
+import { TermsAndConditions } from './terms-and-conditions';
 
 function getTitleFromPathname(pathname: string): string {
   if (pathname === '/') return 'Dashboard';
@@ -64,8 +65,9 @@ export function AppLayout({ children }: { children: ReactNode }) {
           <div className="flex flex-col flex-1">
             <Header />
             <main className="flex-1 p-4 sm:p-6 lg:p-8">{children}</main>
-            <footer className="mt-auto p-4 text-center text-sm">
+            <footer className="mt-auto p-4 text-center text-sm space-x-4">
               <RefundPolicy />
+              <TermsAndConditions />
             </footer>
           </div>
         </SidebarInset>
