@@ -29,7 +29,7 @@ export function ToolsList({ tools }: { tools: Tool[] }) {
       {filteredTools.length > 0 ? (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {filteredTools.map(tool => (
-            <Card key={tool.name} className="p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
+            <Card key={tool.name} className="p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow aspect-square">
                 <LogoDisplay name={tool.name} className="h-16 w-16 mb-4" />
                 <CardTitle className="text-base font-medium">{tool.name}</CardTitle>
             </Card>
