@@ -8,6 +8,7 @@ async function getUniqueSkills() {
   const skillSet = new Set<string>();
   
   try {
+    // Using a for...of loop to process jobs sequentially and avoid rate limiting.
     for (const job of mockJobs) {
       const result = await extractSkills({ jobDescription: job.description });
       if (result && result.skills) {
