@@ -5,12 +5,11 @@ import { Suspense } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 
 async function getUniqueSkills() {
-  const allSkillsPromises = mockJobs.map(job => extractSkills({ jobDescription: job.description }));
+  const skillSet = new Set<string>();
   
   try {
-    const allSkillsResults = await Promise.all(allSkillsPromises);
-    const skillSet = new Set<string>();
-    allSkillsResults.forEach(result => {
+    for (const job of mockJobs) {
+      const result = await extractSkills({ jobDescription: job.description });
       if (result && result.skills) {
         result.skills.forEach(skill => {
             if(skill.length > 1 && skill.length < 30) { // Basic filtering for quality
@@ -18,7 +17,7 @@ async function getUniqueSkills() {
             }
         });
       }
-    });
+    }
     return Array.from(skillSet).sort((a, b) => a.localeCompare(b));
   } catch (error) {
     console.error("Failed to get unique skills:", error);
