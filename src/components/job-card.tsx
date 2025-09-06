@@ -78,11 +78,10 @@ export function JobCard({ job }: { job: Job }) {
           </DialogTrigger>
         </div>
       </Card>
-      <DialogContent className="max-w-4xl max-h-[80vh]">
-        <ScrollArea className="h-full pr-6">
-          <CardHeader className="p-0 pt-4">
-            <div className="flex flex-col md:flex-row gap-6">
-              <Avatar className="h-20 w-20 rounded-md border">
+      <DialogContent className="max-w-4xl max-h-[80vh] flex flex-col">
+        <DialogHeader>
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+              <Avatar className="h-20 w-20 rounded-md border shrink-0">
                 {job.logo && <AvatarImage src={job.logo} alt={`${job.company} logo`} data-ai-hint="logo" />}
                 <AvatarFallback>{job.company.charAt(0)}</AvatarFallback>
               </Avatar>
@@ -100,16 +99,11 @@ export function JobCard({ job }: { job: Job }) {
                 <ApplyButton job={job} />
               </div>
             </div>
-          </CardHeader>
-          <CardContent className="p-0 pt-6 space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold font-headline">Full Course Description</h3>
-            </div>
-            <Separator />
-            
+        </DialogHeader>
+        <Separator className="my-4" />
+        <ScrollArea className="flex-grow pr-6 -mr-6">
+            <h3 className="text-lg font-semibold font-headline mb-4">Full Course Description</h3>
             {renderDescription(job.description)}
-
-          </CardContent>
         </ScrollArea>
       </DialogContent>
     </Dialog>
