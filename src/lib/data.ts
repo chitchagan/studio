@@ -60,4 +60,10 @@ export const mockTools: Tool[] = [
     { name: 'ElevenLabs' },
     { name: 'Krea.ai' },
     { name: 'Suno.com' },
+    { name: 'Open AI' },
+    { name: 'Perplexity' },
+    { name: 'Zapier' },
+    { name: 'Canva' },
+    { name: 'Gamma' },
+    { name: 'Wisp' },
 ];
