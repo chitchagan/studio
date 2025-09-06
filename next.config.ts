@@ -2,6 +2,8 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: "export",              // create static site in /out
+  images: { unoptimized: true }, // needed for export when using next/image
   typescript: {
     ignoreBuildErrors: true,
   },
