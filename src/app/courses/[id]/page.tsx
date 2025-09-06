@@ -1,27 +1,37 @@
 import { notFound } from 'next/navigation';
 import { mockJobs } from '@/lib/data';
-import { extractSkills } from '@/ai/flows/extract-skills-from-job-description';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ApplyButton } from '@/components/apply-button';
 import { MapPin, DollarSign, Briefcase, Calendar } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
-import { AiSkillsDialog } from '@/components/ai-skills-dialog';
-import { Button } from '@/components/ui/button';
+
+function renderDescription(description: string) {
+  const lines = description.split('\n').filter(line => line.trim() !== '');
+
+  return (
+    <div className="text-foreground/80 leading-relaxed space-y-4">
+      {lines.map((line, index) => {
+        if (line.startsWith('Week') || line.startsWith('By Day 28')) {
+          return <h4 key={index} className="text-md font-semibold text-foreground mt-4">{line}</h4>;
+        }
+        if (line.startsWith('•')) {
+          return (
+            <ul key={index} className="list-disc pl-5 space-y-2">
+              <li className="pl-2">{line.substring(1).trim()}</li>
+            </ul>
+          );
+        }
+        return <p key={index}>{line}</p>;
+      })}
+    </div>
+  );
+}
 
 export default async function CourseDetailPage({ params }: { params: { id: string } }) {
   const job = mockJobs.find(j => j.id === params.id);
   if (!job) {
     notFound();
-  }
-
-  let skills: string[] = [];
-  try {
-    const skillsResult = await extractSkills({ jobDescription: job.description });
-    skills = skillsResult.skills;
-  } catch (error) {
-    console.error("Failed to extract skills:", error);
-    // Continue rendering without skills if AI fails
   }
 
   return (
@@ -49,19 +59,13 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
           </div>
         </CardHeader>
         <CardContent className="p-6 space-y-6">
-          <div className="flex items-center justify-between">
+          <div>
             <h3 className="text-lg font-semibold font-headline">Full Course Description</h3>
-            {skills.length > 0 && (
-                <AiSkillsDialog skills={skills} />
-            )}
           </div>
           <Separator />
           
-          <div className="text-foreground/80 leading-relaxed space-y-4">
-            {job.description.split('\n').map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
+          {renderDescription(job.description)}
+
         </CardContent>
       </Card>
     </div>
