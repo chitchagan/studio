@@ -7,8 +7,9 @@ export async function PersonalizedRecommendations() {
   const jobPostings = JSON.stringify(
     mockJobs.map(j => ({ id: j.id, title: j.title, description: j.description }))
   );
-  const userProfile = `Skills: ${mockUser.skills.join(', ')}. Experience: ${mockUser.experience}`;
-  const searchHistory = mockUser.searchHistory.join(', ');
+  // User profile is now hardcoded for recommendations, as there are no logged in users.
+  const userProfile = `Skills: Python, Generative AI. Experience: Software Developer.`;
+  const searchHistory = "Generative AI, Agentic Design";
 
   try {
     const result = await personalizedJobRecommendations({
@@ -24,7 +25,7 @@ export async function PersonalizedRecommendations() {
     if (recommendedJobs.length === 0) {
       return (
         <Card className="flex items-center justify-center p-8">
-            <p className="text-muted-foreground">No personalized recommendations available right now. Update your profile to get better matches.</p>
+            <p className="text-muted-foreground">No personalized recommendations available right now.</p>
         </Card>
       );
     }

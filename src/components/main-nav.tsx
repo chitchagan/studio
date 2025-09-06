@@ -7,14 +7,14 @@ import {
   LayoutDashboard,
   Briefcase,
   Wrench,
-  User,
+  Mail,
 } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/courses', label: 'Courses', icon: Briefcase },
   { href: '/tools', label: 'Tools', icon: Wrench },
-  { href: '/profile', label: 'Profile', icon: User },
+  { href: '/profile', label: 'Contact Us', icon: Mail },
 ];
 
 export function MainNav() {
