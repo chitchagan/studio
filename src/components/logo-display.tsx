@@ -38,8 +38,10 @@ export function LogoDisplay({ name, className }: LogoDisplayProps) {
         )
     }
 
+    const bgClass = name === 'ChatGPT' ? 'bg-[#74AA9C]' : 'bg-muted';
+
     return (
-        <div className={cn("rounded-lg overflow-hidden p-2 flex items-center justify-center bg-[#74AA9C]", className)}>
+        <div className={cn("rounded-lg overflow-hidden p-2 flex items-center justify-center", bgClass, className)}>
             {logo}
         </div>
     );
