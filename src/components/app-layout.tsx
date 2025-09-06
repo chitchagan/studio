@@ -16,6 +16,7 @@ import { ReactNode } from 'react';
 import { Separator } from './ui/separator';
 import { RefundPolicy } from './refund-policy';
 import { TermsAndConditions } from './terms-and-conditions';
+import { PrivacyPolicy } from './privacy-policy';
 
 function getTitleFromPathname(pathname: string): string {
   if (pathname === '/') return 'Dashboard';
@@ -68,6 +69,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
             <footer className="mt-auto p-4 text-center text-sm space-x-4">
               <RefundPolicy />
               <TermsAndConditions />
+              <PrivacyPolicy />
             </footer>
           </div>
         </SidebarInset>
