@@ -50,6 +50,13 @@ export default function DashboardPage() {
       <div>
         <h1 className="text-3xl font-headline font-bold tracking-tight">Welcome to StanSkill</h1>
         <p className="text-muted-foreground mt-2">Your AI-powered co-pilot for career growth. Here's what's new for you.</p>
+        <div className="mt-4 text-foreground/80 space-y-2">
+            <p>At Stanskill, we specialize in corporate training on Generative & Agentic AI for today’s digital workforce.</p>
+            <p>Our programs simplify complex AI concepts into hands-on, low-code learning that anyone can apply.</p>
+            <p>We deliver practical workshops, projects, and capstones designed for HR, IT, Finance, and Marketing teams.</p>
+            <p>With a focus on real business use cases and responsible AI adoption, we ensure immediate workplace impact.</p>
+            <p>Join us to upskill your teams and future-proof your organization in the age of AI.</p>
+        </div>
       </div>
 
       <section>
