@@ -53,7 +53,7 @@ export default function DashboardPage() {
       </div>
 
       <section>
-        <h2 className="text-2xl font-headline font-semibold mb-4">Recommended For You</h2>
+        <h2 className="text-2xl font-headline font-semibold mb-4">Recommended Courses</h2>
         <Suspense fallback={<RecommendationsSkeleton />}>
           <PersonalizedRecommendations />
         </Suspense>

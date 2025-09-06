@@ -5,7 +5,7 @@ export type Job = {
   location: string;
   description: string;
   salary?: string;
-  type: 'Full-time' | 'Part-time' | 'Contract';
+  type: 'Full-time' | 'Part-time' | 'Contract' | 'Live Interactive Training';
   postedDate: string;
   logo: string;
 };
@@ -23,4 +23,9 @@ export type Application = {
   job: Job;
   appliedDate: string;
   status: 'Applied' | 'In Review' | 'Interview' | 'Offered' | 'Rejected';
+};
+
+export type Tool = {
+  name: string;
+  logo: string;
 };

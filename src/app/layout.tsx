@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
 
 export const metadata: Metadata = {
-  title: 'StanSkill - AI-Powered Career Development',
-  description: 'Find your next job with AI-powered skill matching and personalized recommendations.',
+  title: 'StanSkill - AI-Powered Learning',
+  description: 'Explore AI courses and tools with personalized recommendations.',
 };
 
 export default function RootLayout({

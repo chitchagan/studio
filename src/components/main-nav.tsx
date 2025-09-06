@@ -6,16 +6,14 @@ import { cn } from '@/lib/utils';
 import {
   LayoutDashboard,
   Briefcase,
-  FileText,
-  Shapes,
+  Wrench,
   User,
 } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/jobs', label: 'Jobs', icon: Briefcase },
-  { href: '/applications', label: 'Applications', icon: FileText },
-  { href: '/skills', label: 'Skills Explorer', icon: Shapes },
+  { href: '/courses', label: 'Courses', icon: Briefcase },
+  { href: '/tools', label: 'Tools', icon: Wrench },
   { href: '/profile', label: 'Profile', icon: User },
 ];
 

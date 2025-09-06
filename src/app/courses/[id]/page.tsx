@@ -8,7 +8,7 @@ import { MapPin, DollarSign, Briefcase, Calendar } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 
-export default async function JobDetailPage({ params }: { params: { id: string } }) {
+export default async function CourseDetailPage({ params }: { params: { id: string } }) {
   const job = mockJobs.find(j => j.id === params.id);
   if (!job) {
     notFound();
@@ -64,7 +64,7 @@ export default async function JobDetailPage({ params }: { params: { id: string }
           <Separator />
 
           <div>
-            <h3 className="text-lg font-semibold font-headline mb-3">Full Job Description</h3>
+            <h3 className="text-lg font-semibold font-headline mb-3">Full Course Description</h3>
             <div className="text-foreground/80 leading-relaxed space-y-4">
               {job.description.split('\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>

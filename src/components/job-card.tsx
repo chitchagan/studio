@@ -40,7 +40,7 @@ export function JobCard({ job }: { job: Job }) {
       </CardContent>
       <div className="p-6 pt-0 mt-auto">
         <Button asChild className="w-full">
-          <Link href={`/jobs/${job.id}`}>View Details</Link>
+          <Link href={`/courses/${job.id}`}>View Details</Link>
         </Button>
       </div>
     </Card>

@@ -1,4 +1,4 @@
-import type { Job, UserProfile } from './types';
+import type { Job, UserProfile, Tool } from './types';
 
 export const mockJobs: Job[] = [
   {
@@ -52,22 +52,6 @@ Required Skills: Figma, Sketch, Adobe XD, Prototyping, User Research.`,
     logo: 'https://picsum.photos/seed/creative/100/100'
   },
   {
-    id: '4',
-    title: 'Product Manager, AI',
-    company: 'FutureTech',
-    location: 'Austin, TX',
-    description: `FutureTech is at the forefront of AI innovation and we're looking for a Product Manager to lead our AI product initiatives. You will define the product vision, strategy, and roadmap. You must have a strong technical background, preferably with experience in machine learning or AI.
-Key Responsibilities:
-- Define and communicate product strategy.
-- Work with engineering teams to deliver features.
-- Conduct market research and competitive analysis.
-Required Skills: Product Management, Agile, JIRA, Machine Learning, AI.`,
-    salary: '$160,000 - $200,000',
-    type: 'Full-time',
-    postedDate: '2024-07-21',
-    logo: 'https://picsum.photos/seed/futuretech/100/100'
-  },
-  {
     id: '5',
     title: 'DevOps Engineer',
     company: 'CloudScale',
@@ -110,3 +94,19 @@ export const mockUser: UserProfile = {
   experience: '5+ years as a full-stack developer and technical lead. Led a team of 5 engineers to launch a new B2B SaaS product. Passionate about building scalable and user-friendly applications.',
   searchHistory: ['Frontend Engineer', 'Product Manager', 'React Developer jobs in San Francisco']
 };
+
+export const mockTools: Tool[] = [
+    { name: 'ChatGPT', logo: 'https://picsum.photos/seed/chatgpt/100/100' },
+    { name: 'Gemini', logo: 'https://picsum.photos/seed/gemini/100/100' },
+    { name: 'Grok', logo: 'https://picsum.photos/seed/grok/100/100' },
+    { name: 'Make.com', logo: 'https://picsum.photos/seed/make/100/100' },
+    { name: 'Claude', logo: 'https://picsum.photos/seed/claude/100/100' },
+    { name: 'n8n', logo: 'https://picsum.photos/seed/n8n/100/100' },
+    { name: 'Replit', logo: 'https://picsum.photos/seed/replit/100/100' },
+    { name: 'Cursor', logo: 'https://picsum.photos/seed/cursor/100/100' },
+    { name: 'Lovable', logo: 'https://picsum.photos/seed/lovable/100/100' },
+    { name: 'Bolt.new', logo: 'https://picsum.photos/seed/bolt/100/100' },
+    { name: 'ElevenLabs', logo: 'https://picsum.photos/seed/elevenlabs/100/100' },
+    { name: 'Krea.ai', logo: 'https://picsum.photos/seed/krea/100/100' },
+    { name: 'Suno.com', logo: 'https://picsum.photos/seed/suno/100/100' },
+];

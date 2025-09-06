@@ -45,7 +45,7 @@ export async function PersonalizedRecommendations() {
                 <CardDescription>Could not load recommendations</CardDescription>
             </CardHeader>
             <CardContent>
-                <p className="text-destructive">There was an issue fetching your personalized job recommendations. Please try again later.</p>
+                <p className="text-destructive">There was an issue fetching your personalized course recommendations. Please try again later.</p>
             </CardContent>
         </Card>
     )
