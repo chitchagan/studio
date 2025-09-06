@@ -3,9 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Input } from '@/components/ui/input';
 import { Card, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import type { Tool } from '@/lib/types';
-import { LogoDisplay } from './logo-display';
 
 export function ToolsList({ tools }: { tools: Tool[] }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,7 +28,6 @@ export function ToolsList({ tools }: { tools: Tool[] }) {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {filteredTools.map(tool => (
             <Card key={tool.name} className="p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow aspect-square">
-                <LogoDisplay name={tool.name} className="h-20 w-20 mb-4 text-white" />
                 <CardTitle className="text-base font-medium">{tool.name}</CardTitle>
             </Card>
           ))}

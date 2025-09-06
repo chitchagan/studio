@@ -27,5 +27,4 @@ export type Application = {
 
 export type Tool = {
   name: string;
-  logo: string;
 };
