@@ -65,5 +65,5 @@ export const mockTools: Tool[] = [
     { name: 'Zapier' },
     { name: 'Canva' },
     { name: 'Gamma' },
-    { name: 'Wisp' },
+    { name: 'Wispr' },
 ];
