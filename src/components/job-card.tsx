@@ -11,7 +11,7 @@ export function JobCard({ job }: { job: Job }) {
     <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="flex flex-row items-start gap-4">
         <Avatar className="h-12 w-12 rounded-sm">
-          <AvatarImage src={job.logo} alt={`${job.company} logo`} data-ai-hint="logo" />
+          {job.logo && <AvatarImage src={job.logo} alt={`${job.company} logo`} data-ai-hint="logo" />}
           <AvatarFallback>{job.company.charAt(0)}</AvatarFallback>
         </Avatar>
         <div className="flex-1">

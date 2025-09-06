@@ -29,7 +29,7 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
         <CardHeader className="bg-muted/30 p-6">
           <div className="flex flex-col md:flex-row gap-6">
             <Avatar className="h-20 w-20 rounded-md border">
-              <AvatarImage src={job.logo} alt={`${job.company} logo`} data-ai-hint="logo" />
+              {job.logo && <AvatarImage src={job.logo} alt={`${job.company} logo`} data-ai-hint="logo" />}
               <AvatarFallback>{job.company.charAt(0)}</AvatarFallback>
             </Avatar>
             <div className="flex-1">

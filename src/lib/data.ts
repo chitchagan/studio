@@ -16,7 +16,7 @@ Required Skills: Basic Python knowledge, familiarity with APIs.`,
     salary: '25,000 INR',
     type: 'Live Interactive Training',
     postedDate: '2024-07-20',
-    logo: 'https://picsum.photos/seed/innovate/100/100'
+    logo: ''
   },
   {
     id: '2',
@@ -33,7 +33,7 @@ Required Skills: Advanced Python, Experience with LLMs, API Development.`,
     salary: '25,000 INR',
     type: 'Live Interactive Training',
     postedDate: '2024-07-19',
-    logo: 'https://picsum.photos/seed/datadriven/100/100'
+    logo: ''
   }
 ];
 
@@ -47,17 +47,17 @@ export const mockUser: UserProfile = {
 };
 
 export const mockTools: Tool[] = [
-    { name: 'ChatGPT', logo: 'https://placehold.co/100x100/74AA9C/FFFFFF/png?text=ChatGPT' },
-    { name: 'Gemini', logo: 'https://placehold.co/100x100/8875FF/FFFFFF/png?text=Gemini' },
-    { name: 'Grok', logo: 'https://placehold.co/100x100/000000/FFFFFF/png?text=Grok' },
-    { name: 'Make.com', logo: 'https://placehold.co/100x100/6C36FF/FFFFFF/png?text=Make' },
-    { name: 'Claude', logo: 'https://placehold.co/100x100/D97757/FFFFFF/png?text=Claude' },
-    { name: 'n8n', logo: 'https://placehold.co/100x100/0044FF/FFFFFF/png?text=n8n' },
-    { name: 'Replit', logo: 'https://placehold.co/100x100/FF7F19/FFFFFF/png?text=Replit' },
-    { name: 'Cursor', logo: 'https://placehold.co/100x100/000000/FFFFFF/png?text=Cursor' },
-    { name: 'Lovable', logo: 'https://placehold.co/100x100/FFC0CB/000000/png?text=Lovable' },
-    { name: 'Bolt.new', logo: 'https://placehold.co/100x100/00A3FF/FFFFFF/png?text=Bolt' },
-    { name: 'ElevenLabs', logo: 'https://placehold.co/100x100/000000/FFFFFF/png?text=ElevenLabs' },
-    { name: 'Krea.ai', logo: 'https://placehold.co/100x100/000000/FFFFFF/png?text=Krea' },
-    { name: 'Suno.com', logo: 'https://placehold.co/100x100/FF69B4/FFFFFF/png?text=Suno' },
+    { name: 'ChatGPT', logo: '' },
+    { name: 'Gemini', logo: '' },
+    { name: 'Grok', logo: '' },
+    { name: 'Make.com', logo: '' },
+    { name: 'Claude', logo: '' },
+    { name: 'n8n', logo: '' },
+    { name: 'Replit', logo: '' },
+    { name: 'Cursor', logo: '' },
+    { name: 'Lovable', logo: '' },
+    { name: 'Bolt.new', logo: '' },
+    { name: 'ElevenLabs', logo: '' },
+    { name: 'Krea.ai', logo: '' },
+    { name: 'Suno.com', logo: '' },
 ];
