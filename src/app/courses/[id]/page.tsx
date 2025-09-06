@@ -2,11 +2,12 @@ import { notFound } from 'next/navigation';
 import { mockJobs } from '@/lib/data';
 import { extractSkills } from '@/ai/flows/extract-skills-from-job-description';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { ApplyButton } from '@/components/apply-button';
 import { MapPin, DollarSign, Briefcase, Calendar } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
+import { AiSkillsDialog } from '@/components/ai-skills-dialog';
+import { Button } from '@/components/ui/button';
 
 export default async function CourseDetailPage({ params }: { params: { id: string } }) {
   const job = mockJobs.find(j => j.id === params.id);
@@ -48,28 +49,18 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
           </div>
         </CardHeader>
         <CardContent className="p-6 space-y-6">
-          {skills.length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold font-headline mb-3">AI-Extracted Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map(skill => (
-                  <Badge key={skill} variant="secondary" className="text-sm px-3 py-1">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          )}
-          
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-semibold font-headline">Full Course Description</h3>
+            {skills.length > 0 && (
+                <AiSkillsDialog skills={skills} />
+            )}
+          </div>
           <Separator />
-
-          <div>
-            <h3 className="text-lg font-semibold font-headline mb-3">Full Course Description</h3>
-            <div className="text-foreground/80 leading-relaxed space-y-4">
-              {job.description.split('\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
+          
+          <div className="text-foreground/80 leading-relaxed space-y-4">
+            {job.description.split('\n').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
         </CardContent>
       </Card>
