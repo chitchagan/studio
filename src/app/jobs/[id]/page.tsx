@@ -36,9 +36,9 @@ export default async function JobDetailPage({ params }: { params: { id: string }
               <CardTitle className="text-3xl font-headline mb-1">{job.title}</CardTitle>
               <CardDescription className="text-lg">{job.company}</CardDescription>
               <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> {job.location}</div>
+                {job.location && <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> {job.location}</div>}
                 <div className="flex items-center gap-2"><Briefcase className="h-4 w-4" /> {job.type}</div>
-                {job.salary && <div className="flex items-center gap-2"><DollarSign className="h-4 w-4" /> {job.salary}</div>}
+                {job.salary && <div className="flex items-center gap-2"><DollarSign className="h-4 w-4" /> {job.salary.includes('INR') ? `Fees: ${job.salary}` : job.salary}</div>}
                 <div className="flex items-center gap-2"><Calendar className="h-4 w-4" /> Posted on {new Date(job.postedDate).toLocaleDateString()}</div>
               </div>
             </div>

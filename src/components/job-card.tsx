@@ -21,14 +21,16 @@ export function JobCard({ job }: { job: Job }) {
       </CardHeader>
       <CardContent className="flex-grow">
         <div className="space-y-2 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <MapPin className="h-4 w-4" />
-            <span>{job.location}</span>
-          </div>
+          {job.location && (
+            <div className="flex items-center gap-2">
+              <MapPin className="h-4 w-4" />
+              <span>{job.location}</span>
+            </div>
+          )}
           {job.salary && (
             <div className="flex items-center gap-2">
               <DollarSign className="h-4 w-4" />
-              <span>{job.salary}</span>
+              <span>{job.salary.includes('INR') ? `Fees: ${job.salary}` : job.salary}</span>
             </div>
           )}
         </div>

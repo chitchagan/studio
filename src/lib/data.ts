@@ -3,35 +3,35 @@ import type { Job, UserProfile } from './types';
 export const mockJobs: Job[] = [
   {
     id: '1',
-    title: 'Senior Frontend Engineer',
-    company: 'Innovate Inc.',
-    location: 'San Francisco, CA',
-    description: `Innovate Inc. is seeking a Senior Frontend Engineer to build and maintain our next-generation user interfaces. The ideal candidate will have extensive experience with React, TypeScript, and modern web technologies. You will be responsible for developing high-quality, responsive, and performant web applications.
-Key Responsibilities:
-- Design and implement user-facing features in our products.
-- Collaborate with product managers, designers, and backend engineers.
-- Optimize applications for speed and scalability.
-- Write clean, maintainable, and testable code.
-Required Skills: React, TypeScript, JavaScript, CSS, HTML, GraphQL, Webpack.`,
-    salary: '$150,000 - $180,000',
-    type: 'Full-time',
+    title: 'Generative AI Foundations Program',
+    company: 'Generative AI Training Company',
+    location: '',
+    description: `Our Generative AI Foundations Program is designed to provide a comprehensive understanding of core generative AI concepts. This program is ideal for developers, product managers, and tech leaders looking to build a strong foundation in AI.
+Key Learning Objectives:
+- Understand the fundamentals of large language models (LLMs).
+- Explore different generative model architectures.
+- Gain hands-on experience with prompt engineering and fine-tuning.
+- Learn to build applications with generative AI APIs.
+Required Skills: Basic Python knowledge, familiarity with APIs.`,
+    salary: '25,000 INR',
+    type: 'Live Interactive Training',
     postedDate: '2024-07-20',
     logo: 'https://picsum.photos/seed/innovate/100/100'
   },
   {
     id: '2',
-    title: 'Backend Developer (Python)',
-    company: 'DataDriven Corp.',
-    location: 'New York, NY',
-    description: `DataDriven Corp. is looking for a Backend Developer specializing in Python. You will work on our core data processing pipeline, building robust and scalable services. Experience with Django or Flask, and familiarity with cloud platforms like AWS is essential.
-Key Responsibilities:
-- Develop and maintain backend services and APIs.
-- Work with large datasets and databases (PostgreSQL, Redis).
-- Ensure the performance, quality, and responsiveness of applications.
-- Deploy applications to cloud environments.
-Required Skills: Python, Django, Flask, SQL, PostgreSQL, AWS, Docker.`,
-    salary: '$140,000 - $170,000',
-    type: 'Full-time',
+    title: 'Agentic AI Practitioner Course',
+    company: 'Generative AI Training Company',
+    location: '',
+    description: `The Agentic AI Practitioner Course focuses on building autonomous AI agents that can reason, plan, and execute tasks. This advanced course is for experienced developers and AI engineers who want to build sophisticated AI systems.
+Key Learning Objectives:
+- Learn about agent architectures like ReAct and Tree of Thoughts.
+- Implement multi-agent systems for complex problem-solving.
+- Integrate tools and external APIs with your agents.
+- Develop strategies for testing and evaluating AI agents.
+Required Skills: Advanced Python, Experience with LLMs, API Development.`,
+    salary: '25,000 INR',
+    type: 'Live Interactive Training',
     postedDate: '2024-07-19',
     logo: 'https://picsum.photos/seed/datadriven/100/100'
   },
