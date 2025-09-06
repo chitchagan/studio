@@ -26,9 +26,12 @@ function renderDescription(description: string) {
           return <h4 key={index} className="text-md font-semibold text-foreground mt-4">{line}</h4>;
         }
         if (line.startsWith('•')) {
+          const subLines = line.split('•').filter(subLine => subLine.trim() !== '');
           return (
             <ul key={index} className="list-disc pl-5 space-y-2">
-              <li className="pl-2">{line.substring(1).trim()}</li>
+              {subLines.map((subLine, subIndex) => (
+                <li key={`${index}-${subIndex}`} className="pl-2">{subLine.trim()}</li>
+              ))}
             </ul>
           );
         }
@@ -78,7 +81,7 @@ export function JobCard({ job }: { job: Job }) {
           </DialogTrigger>
         </div>
       </Card>
-      <DialogContent className="max-w-4xl max-h-[80vh] flex flex-col">
+      <DialogContent className="max-w-4xl">
         <DialogHeader>
           <div className="flex flex-col md:flex-row gap-6 items-start">
               <Avatar className="h-20 w-20 rounded-md border shrink-0">
@@ -101,7 +104,7 @@ export function JobCard({ job }: { job: Job }) {
             </div>
         </DialogHeader>
         <Separator className="my-4" />
-        <ScrollArea className="flex-grow pr-6 -mr-6">
+        <ScrollArea className="max-h-[50vh] pr-6">
             <h3 className="text-lg font-semibold font-headline mb-4">Full Course Description</h3>
             {renderDescription(job.description)}
         </ScrollArea>
